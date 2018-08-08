@@ -16,3 +16,7 @@
       user: name=devops state=absent
     - name: To crate a password
       user: name=devops password={{password}}
+    - name: To install java8
+      yum : pkg=java-1.8.0-openjdk state=installed
+    - name: To install tomcat
+      yum : pkg=tomcat state=installed

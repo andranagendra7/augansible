@@ -1,0 +1,19 @@
+---
+ - hosts: dbserver
+   #tasks: 
+    #- name : to install jenkins
+    #  yum  : pkg=jenkins state=installed
+   tasks:
+ 
+     - name: Update the software package repository
+ 
+       yum: name: ‘*’ update_cache: yes
+ 
+    - name: Install dependencies
+      package: name: “{{ item }}” state: latest
+      with_items:
+           - java-1.8.0-openjdk
+           - git
+           - texlive-latex
+           - wget
+   #- name: Download jenkins repo
