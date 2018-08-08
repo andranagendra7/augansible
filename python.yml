@@ -1,0 +1,8 @@
+---
+ 
+ - hosts: dbserver
+   tasks:
+    - name: to create a user
+      user: name=devops state=present
+    - name: To create a group
+      group: name=devops state=present

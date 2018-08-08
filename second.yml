@@ -1,0 +1,8 @@
+---
+  - hosts: all
+    tasks:
+    - name: TO create a file
+      file:
+        path: /root/nag
+   
+        state: directory

@@ -1,0 +1,18 @@
+---
+ 
+ - hosts: dbserver
+   vars:
+     password: devops
+   tasks:
+    - name: to create a user
+      user: name=devops state=present
+    - name: To create a group
+      group: name=devops state=present
+    - name: To create a password
+      user: name=positive password=think
+    - name: To create user with group
+      user: name=positive group=root uid=777 
+    - name: To delete the user
+      user: name=devops state=absent
+    - name: To crate a password
+      user: name=devops password={{password}}

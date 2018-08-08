@@ -1,0 +1,13 @@
+---
+  - hosts: all
+    tasks:
+    - name: To install the git
+      #yum : pkg=git state=installed
+      yum : pkg=httpd state=installed
+    - name: To start the httpd service
+      #service: pkg=httpd state=started
+      #service: name=httpd state=started
+      #service: name=httpd state=stop
+      #service : name=httpd state=absent
+      service : name=httpd state=stopped
+

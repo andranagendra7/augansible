@@ -1,0 +1,11 @@
+---
+ 
+ - hosts: dbserver
+   tasks:
+    - name: to create a user
+      user: name=devops state=present
+    - name: To create a group
+      group: name=devops state=present
+    - name: To create a password
+      user: name=positive group=positive uid=755 password=think
+
