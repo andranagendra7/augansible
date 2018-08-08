@@ -1,0 +1,6 @@
+---
+
+  - hosts: dbserver
+    tasks:
+     - name: To copy the  file source to destination
+       copy: src=/root/playbook/apache-tomcat-8.5.32  dest=/opt/apache-tomcat-8.5.32

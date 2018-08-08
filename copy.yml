@@ -1,0 +1,8 @@
+---
+ - hosts: dbserver
+   tasks:
+     - name: To copy the  file source to destination
+       copy: src=/root/playbook/apache-tomcat-8.5.32.tar.gz dest=/opt/apache-tomcat-8.5.32.tar.gz 
+     - name: to untar the tomcatzip file
+       command: tar -xvf /opt/apache-tomcat-8.5.32.tar.gz 
+     

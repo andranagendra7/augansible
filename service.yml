@@ -1,0 +1,5 @@
+---
+ - hosts: dbserver
+   tasks: 
+    - name: To stop the jenkins server
+      service: name=jenkins state=restarted
